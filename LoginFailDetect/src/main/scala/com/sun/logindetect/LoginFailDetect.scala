@@ -39,8 +39,6 @@ object LoginFailDetect {
             .keyBy(_.userId)
             .process(new LoginFailWarningResult(2))
         loginFailWarningStrean.print()
-
-
         env.execute(getClass.getName)
     }
 }
