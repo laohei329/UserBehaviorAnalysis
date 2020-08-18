@@ -52,6 +52,8 @@ object LoginFailCEP {
     }
 
 }
+
+//PatternSelectFunction<IN, OUT>  设置输入和输出的类型
 class MyPatternSelectFunction() extends PatternSelectFunction[LoginEvent,LoginFailWarning]{
     override def select(map: util.Map[String, util.List[LoginEvent]]): LoginFailWarning = {
         val firstLoginEcent: LoginEvent = map.get("begin").iterator().next()
