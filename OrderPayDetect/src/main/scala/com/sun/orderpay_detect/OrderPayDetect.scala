@@ -63,7 +63,7 @@ object OrderPayDetect {
 case class OrderEvent(orderId: Long, eventType: String, payId: String, eventTime: Long)
 
 //定义输出样例类
-case class OrderResult(orderId: Long, eventType: String)
+case class OrderResult(orderId: Long, msgString: String)
 
 
 
